@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "705585672658",
+    "firebase_url": "https://fazaadriver-179811.firebaseio.com",
+    "project_id": "fazaadriver-179811",
+    "storage_bucket": "fazaadriver-179811.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705585672658:android:82de022c3f9eaa6b",
+        "android_client_info": {
+          "package_name": "com.rudimentwebtech.fazaadriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "705585672658-a2i516oobb7v6pai18fm6jopolim97vl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rudimentwebtech.fazaadriver",
+            "certificate_hash": "2a0d0c60c9433f602be6689289c48e8735e6f7e6"
+          }
+        },
+        {
+          "client_id": "705585672658-e7un3ervs6ikd8egvoj70ji7a1m8ot0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZMgWk_THuxLgExxvt3PmE1ExA3itv4Gs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705585672658-e7un3ervs6ikd8egvoj70ji7a1m8ot0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

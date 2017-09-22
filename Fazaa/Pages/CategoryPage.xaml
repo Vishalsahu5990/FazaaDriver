@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="Fazaa.CategoryPage"
+		xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+		Title="Category"
+		Padding="0">
+	<StackLayout
+			Orientation="Vertical"
+			Spacing="0" 
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="FillAndExpand"
+			Margin="0"
+
+			>
+		<StackLayout
+				Orientation="Horizontal"
+				HorizontalOptions="Start"
+				VerticalOptions="Center"
+				Spacing="10"
+				Padding="10">
+				<Image Source="icon"
+				/>
+			<Label Text="Store Name"
+				FontSize="20"
+				VerticalTextAlignment="Center"
+				TextColor="#336FB7"/>
+		</StackLayout>
+		<flv:FlowListView
+			SeparatorVisibility="None"
+			HasUnevenRows="true"
+			FlowItemTappedCommand="{Binding ItemTappedCommand}" 
+			FlowLastTappedItem="{Binding LastTappedItem}"
+			FlowColumnMinWidth="150" 
+			x:Name="flowlistview">
+
+			<flv:FlowListView.FlowColumnTemplate>
+				<DataTemplate>
+					<Grid Padding="10">
+						
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*" />
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+						<StackLayout
+							BackgroundColor="#EDEDEE">
+						<ffimageloading:CachedImage 
+							HeightRequest="100" 
+							Aspect="AspectFill"
+							DownsampleHeight="100"
+							DownsampleUseDipUnits="false" 
+							LoadingPlaceholder="image_loading.png"
+							ErrorPlaceholder="image_error.png"
+							Source="{Binding ImageUrl}"
+							HorizontalOptions="FillAndExpand"
+							VerticalOptions="Start"/>
+					
+							<Label 
+							x:Name="Label"
+							HorizontalOptions="Center" 
+							HorizontalTextAlignment="Center" 
+							VerticalOptions="End"
+							TextColor="Black"
+						    Text="{Binding FileName}"/>
+						</StackLayout>
+					</Grid>
+				</DataTemplate>
+			</flv:FlowListView.FlowColumnTemplate>
+		
+		</flv:FlowListView>
+		<StackLayout
+			Orientation="Horizontal"
+			Spacing="1"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			HeightRequest="60">
+		<StackLayout
+			HeightRequest="60"
+			WidthRequest="60"
+			Orientation="Vertical"
+			Spacing="1"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			BackgroundColor="#7AB064">
+		<Image 
+						Margin="0,10,0,0"
+						Source="groceries"
+					VerticalOptions="Center"/>
+				<Label Text="Groceries"
+					TextColor="White"
+					FontSize="8"
+					HorizontalOptions="FillAndExpand"
+					HorizontalTextAlignment="Center"/>
+			</StackLayout>
+		<StackLayout
+			HeightRequest="60"
+			Orientation="Vertical"
+			Spacing="1"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			BackgroundColor="#7AB064"
+				WidthRequest="60"	>
+		<Image 
+		Margin="0,10,0,0"
+						Source="coffee"
+					VerticalOptions="Center"/>
+				<Label Text="Coffee Bakeries"
+					TextColor="White"
+					FontSize="8"
+					HorizontalOptions="FillAndExpand"
+					HorizontalTextAlignment="Center"
+					x:Name="lblCoffebakeries"/>
+			</StackLayout>
+		<StackLayout
+		WidthRequest="60"
+			HeightRequest="60"
+			Orientation="Vertical"
+			Spacing="1"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			BackgroundColor="#7AB064">
+		<Image
+		Margin="0,10,0,0"
+						Source="pharmacy"
+					VerticalOptions="Center"/>
+				<Label Text="Pharmacies"
+					TextColor="White"
+					FontSize="8"
+					HorizontalOptions="FillAndExpand"
+					HorizontalTextAlignment="Center"/>
+			</StackLayout>
+		<StackLayout
+					WidthRequest="60"
+			HeightRequest="60"
+			Orientation="Vertical"
+			Spacing="1"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			BackgroundColor="#7AB064">
+		<Image 
+		Margin="0,10,0,0"
+						Source="restaurants"
+					VerticalOptions="Center"/>
+				<Label Text="Restaurants"
+					TextColor="White"
+					FontSize="8"
+					HorizontalOptions="FillAndExpand"
+					HorizontalTextAlignment="Center"/>
+			</StackLayout>
+		<StackLayout
+					WidthRequest="60"
+			HeightRequest="60"
+			Orientation="Vertical"
+			Spacing="1"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			BackgroundColor="#7AB064"> 
+		<Image 
+		Margin="0,10,0,0"
+						Source="deliver"
+					VerticalOptions="Center"/>
+				<Label Text="Deliver"
+					TextColor="White"
+					FontSize="8"
+					HorizontalOptions="FillAndExpand"
+					HorizontalTextAlignment="Center"/>
+			</StackLayout> 
+	</StackLayout>
+		</StackLayout> 
+</ContentPage>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="Fazaa.NewOrderPage"
+		xmlns:abstractions="clr-namespace:RoundedBoxView.Forms.Plugin.Abstractions;assembly=RoundedBoxView.Forms.Plugin.Abstractions"
+        xmlns:controls="clr-namespace:DrawShape;assembly=DrawShape"
+		 xmlns:local="clr-namespace:Fazaa">
+	<RelativeLayout 
+            Padding="0"
+            Margin="0"
+            x:Name="_MainLayout"
+            RelativeLayout.WidthConstraint="{ConstraintExpression , Property=Width,Type=RelativeToParent}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression , Property=Height,Type=RelativeToParent}">
+
+        <Image Source="bg"
+                x:Name="imgBG"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Property=Width, Constant=0}"
+              RelativeLayout.WidthConstraint="{ConstraintExpression , Property=Width,Type=RelativeToParent}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression , Property=Height,Type=RelativeToParent}"/>
+
+         <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+             
+    <ScrollView 
+            IsClippedToBounds="true"
+            >
+        <StackLayout Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start">
+        <StackLayout
+            Orientation="Horizontal"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="60"
+                BackgroundColor="#57B352"
+
+                Padding="0">
+
+        <StackLayout Orientation="Horizontal" 
+                    HorizontalOptions="CenterAndExpand">
+        <Image 
+            Aspect="AspectFit"
+                    Source="logo"
+                Margin="10,10,5,10"/> 
+               
+                </StackLayout>
+            
+         </StackLayout>
+    <StackLayout  
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            Margin="0,10,0,0"
+            Spacing="5"
+            Padding="25,0,25,0">
+
+
+            
+            <Label 
+                    Text="New order"
+                    HorizontalOptions="Center"
+                    FontSize="20"
+                    TextColor="White"
+                    />
+            <StackLayout 
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+
+            Margin="0,20,0,0"
+                    BackgroundColor="White">
+            <Label 
+                    Text="Customer Name"
+                    HorizontalOptions="Start"
+                    FontSize="17"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    Margin="5"/>
+                <BoxView BackgroundColor="Silver"
+                HeightRequest="0.5"
+                HorizontalOptions="FillAndExpand"/>
+                <Label 
+                    Text="N/A"
+                    HorizontalOptions="Start"
+                    FontSize="15"
+                    TextColor="Green"
+                        Margin="5,0,0,7"
+                        x:Name="lblCustomerName"
+                        VerticalOptions="CenterAndExpand"
+                    />
+            </StackLayout>
+            <StackLayout 
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+
+            Margin="0,10,0,0"
+                    BackgroundColor="White">
+            <Label 
+                    Text="Destination"
+                    HorizontalOptions="Start"
+                    FontSize="17"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    Margin="5"/>
+                <BoxView BackgroundColor="Silver"
+                HeightRequest="0.5"
+                HorizontalOptions="FillAndExpand"/>
+                <Label 
+                    Text="N/A"
+                    HorizontalOptions="Start"
+                    FontSize="15"
+                    TextColor="Green"
+                       Margin="5,0,0,7"
+                        x:Name="lblDestination"
+                    />
+            </StackLayout>
+            <StackLayout 
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+
+            Margin="0,10,0,0"
+                    BackgroundColor="White">
+            <Label 
+                    Text="Store Name"
+                    HorizontalOptions="Start"
+                    FontSize="17"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    Margin="5"/>
+                <BoxView BackgroundColor="Silver"
+                HeightRequest="0.5"
+                HorizontalOptions="FillAndExpand"/>
+                <Label 
+                    Text="N/A"
+                    HorizontalOptions="Start"
+                    FontSize="15"
+                    TextColor="Green"
+                        Margin="5,0,0,7"
+                        x:Name="lblStoreName"
+                    />
+            </StackLayout>
+            <StackLayout 
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+
+            Margin="0,10,0,0"
+                    BackgroundColor="White">
+            <Label 
+                    Text="Store Location"
+                    HorizontalOptions="Start"
+                    FontSize="17"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    Margin="5"/>
+                <BoxView BackgroundColor="Silver"
+                HeightRequest="0.5"
+                HorizontalOptions="FillAndExpand"/>
+                <Label 
+                    Text="N/A"
+                    HorizontalOptions="Start"
+                    FontSize="15"
+                    TextColor="Green"
+                       Margin="5,0,0,7"
+                        x:Name="lblStoreLocation"
+                    />
+            </StackLayout>
+            <StackLayout 
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+
+            Margin="0,10,0,0"
+                    BackgroundColor="White">
+            <Label 
+                    Text="Order Price"
+                    HorizontalOptions="Start"
+                    FontSize="17"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    Margin="5"/>
+               <BoxView BackgroundColor="Silver"
+                HeightRequest="0.5"
+                HorizontalOptions="FillAndExpand"/>
+                <Label 
+                    Text="N/A"
+                    HorizontalOptions="Start"
+                    FontSize="15"
+                    TextColor="Green"
+                        Margin="5,0,0,7"
+                        x:Name="lblPrice"
+                    />
+            </StackLayout>
+            <StackLayout
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal"
+                    Margin="0,20,0,0"
+                    x:Name="stlCircle">
+                
+             <local:CustomFrame 
+            HeightRequest="100"
+            WidthRequest="100"
+            CornerRadius="70"
+            HorizontalOptions="Center"
+            BackgroundColor="#494848">
+            <StackLayout VerticalOptions="Center" Spacing="0">
+            <Label Text="30"
+                TextColor="White"
+                FontSize="50"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="CenterAndExpand"
+                                    x:Name="lblCounter"/>
+                <Label
+                 TextColor="White"
+                 FontAttributes="Bold"
+                Text="Second"
+                HorizontalTextAlignment="Center"
+               />
+            </StackLayout>
+
+        </local:CustomFrame>
+            
+            </StackLayout>
+            <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    Margin="0,20,0,0"
+                    >
+            <Button
+                        
+                    BackgroundColor="Green"
+                    HorizontalOptions="FillAndExpand"
+                    Text="ACCEPT"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HeightRequest="40"
+                    x:Name="btnAccept"/>
+     <Button
+                    BackgroundColor="Red"
+                    HorizontalOptions="FillAndExpand"
+                    Text="REJECT"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HeightRequest="40"
+                    x:Name="btnReject"/>
+            
+            </StackLayout>
+        </StackLayout>
+            </StackLayout>
+            </ScrollView>
+        
+        
+        </Grid>
+
+   
+            </RelativeLayout> 
+</ContentPage>

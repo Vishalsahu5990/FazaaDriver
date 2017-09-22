@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Fazaa.CheckoutPage"
+		BackgroundColor="White">
+	<ScrollView 
+		IsClippedToBounds="true">
+	<StackLayout
+				Orientation="Vertical"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Start"
+				Spacing="20"
+				Margin="0,20,0,0">
+			<StackLayout
+				Orientation="Vertical"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Center"
+				Padding="10,0,10,0">
+				<StackLayout
+				Orientation="Horizontal"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Center"
+				BackgroundColor="#6FAD57"
+				HeightRequest="40"
+				Spacing="10"
+						>
+					
+				<Image
+						Margin="10,10,10,10"
+						Source="icon"/>
+					<Label Text="Select your Address"
+					TextColor="White"
+					FontSize="18"
+					VerticalTextAlignment="Center"
+						/>
+
+				<Image
+						Margin="10,10,10,10"
+						HorizontalOptions="End"
+						Source="icon"/>
+				</StackLayout>
+				<Frame
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Start"
+				BackgroundColor="Transparent"
+				OutlineColor="Green"
+				>
+				<Entry 
+					HeightRequest="100"
+							Placeholder="Add new address"
+							PlaceholderColor="Gray"
+					/>
+					</Frame>
+				<Label Text="PAYMENTS"
+					TextColor="Black"
+					FontSize="18"/>
+				<StackLayout
+				Orientation="Horizontal"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Center"
+				BackgroundColor="#6FAD57"
+				HeightRequest="40"
+				Spacing="10"
+						>
+					
+				<Image
+						Margin="10,10,10,10"
+						Source="icon"/>
+					<Image
+						Margin="10,10,10,10"
+						HorizontalOptions="End"
+						Source="icon"/>
+					<Label Text="Cash"
+					TextColor="White"
+					FontSize="18"
+					VerticalTextAlignment="Center"
+						/>
+						</StackLayout>
+				<StackLayout
+				Orientation="Horizontal"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Center"
+				BackgroundColor="#6FAD57"
+				HeightRequest="40"
+				Spacing="10"
+				Margin="0,20,0,0"		>
+					
+				<Image
+						Margin="10,10,10,10"
+						Source="icon"/>
+					<Image
+						Margin="10,10,10,10"
+						HorizontalOptions="End"
+						Source="icon"/>
+					<Label Text="Credit Card"
+					TextColor="White"
+					FontSize="18"
+					VerticalTextAlignment="Center"
+						/>
+
+				</StackLayout>
+				<StackLayout
+				Orientation="Horizontal"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Center"
+				HeightRequest="40"
+				Spacing="10"
+				Margin="0,20,0,0"		>
+					
+				<Label Text="Card number"
+					TextColor="Black"
+					FontSize="14"
+					VerticalTextAlignment="Center"
+						/>
+					<Entry 
+					HorizontalOptions="End"
+						Placeholder="Enter card number"
+						Margin="17,0,0,0"
+						PlaceholderColor="Gray"/>
+
+				</StackLayout>
+				<StackLayout
+				Orientation="Horizontal"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Center"
+				HeightRequest="40"
+					>
+					
+				<Label Text="Expiration date"
+					TextColor="Black"
+					FontSize="13.5"
+					VerticalTextAlignment="Center"
+						/>
+					<Entry 
+					    HorizontalOptions="End"
+						Placeholder="Enter date"
+						Margin="10,0,0,0"
+						PlaceholderColor="Gray"/>
+
+				</StackLayout>
+				<StackLayout
+				Orientation="Horizontal"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Center"
+				HeightRequest="40"
+					>
+					
+				<Label Text="Security code"
+					TextColor="Black"
+					FontSize="14"
+					VerticalTextAlignment="Center"
+						/>
+					<Entry 
+					    HorizontalOptions="End"
+						Placeholder="Enter code"
+						Margin="15,0,0,0"
+						PlaceholderColor="Gray"/>
+
+				</StackLayout>
+				<Button
+					BackgroundColor="#6FAD57"
+					HeightRequest="40"
+					BorderRadius="0"
+					Text="Confirm Order"
+					TextColor="White"
+					Margin="0,0,0,15"/>
+				</StackLayout>
+		</StackLayout>
+		</ScrollView> 
+</ContentPage>

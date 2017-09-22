@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Fazaa.MyCartPage"
+		Title="My Cart(0)"
+		BackgroundColor="White"
+		Padding="0,10,0,0">
+	<StackLayout
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="FillAndExpand"
+			Orientation="Vertical">
+	<ListView   
+				x:Name="listView"
+				SeparatorColor="Gray"
+				VerticalOptions="FillAndExpand"
+				RowHeight="95"
+				>
+			 <ListView.Footer> 
+     <StackLayout
+			Orientation="Horizontal"
+			Padding="10"
+			HeightRequest="40"
+			BackgroundColor="#6E99CC">
+			<StackLayout
+			HorizontalOptions="EndAndExpand"
+			VerticalOptions="Center"
+			Orientation="Horizontal"
+			Spacing="10"
+			>
+						<Label 
+					VerticalTextAlignment="Center"
+					Text="Total 5 items"
+					FontSize="15"
+					TextColor="White"
+					FontAttributes="Bold"			
+					HorizontalOptions="StartAndExpand"/>
+						
+					</StackLayout>
+			<StackLayout
+			HorizontalOptions="EndAndExpand"
+			VerticalOptions="Center"
+			Orientation="Horizontal"
+			Spacing="10"
+			>
+						<Label 
+					VerticalTextAlignment="Center"
+					Text="Amount : 75SR"
+					FontSize="15"
+					TextColor="White"
+					FontAttributes="Bold"			
+					HorizontalOptions="StartAndExpand"/>
+						
+					</StackLayout>
+						<StackLayout
+			HorizontalOptions="EndAndExpand"
+			VerticalOptions="End"
+			Orientation="Horizontal"
+			Spacing="10"
+			>
+						<Button
+					Text="Checkout"
+					BackgroundColor="#7AB064"/>
+						
+					</StackLayout>
+						</StackLayout>
+  </ListView.Footer>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                     <StackLayout
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			Orientation="Vertical"
+			BackgroundColor="White"
+				Padding="3"	
+				Spacing="0">
+
+				<StackLayout
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			Orientation="Horizontal"
+
+					>
+					<Image 
+					Source="fruits"
+					HeightRequest="70"
+					WidthRequest="60"
+					Aspect="AspectFill"
+					Margin="5,0,5,0"/>
+					<StackLayout
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Start"
+			Orientation="Vertical"
+
+					>
+					<Label
+					FontAttributes="Bold"
+					Text="Fruits and Vegetables"
+					FontSize="12"
+					x:Name="lblTitle"
+					TextColor="#336FB7"
+					/>
+
+				<StackLayout
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Start"
+			Orientation="Horizontal">
+			<Label 
+					LineBreakMode="TailTruncation"
+					Text="It is a long elastic fact that a user destracted by a readabale content of a page when looking at its layout. The point of using lorem ipsum is that it has a more or less normal distribution of letters as opposed to using content here making it look like redable English. "
+					FontSize="9"
+					x:Name="lblDescription"
+					TextColor="Gray"
+					Margin="0,0,20,0"
+							VerticalTextAlignment="Center"/>
+						<Button
+							TextColor="Black"
+							FontSize="7"
+							Text="5"
+							HeightRequest="30"
+							WidthRequest="30"
+							BackgroundColor="#E8F3F4"/>
+					</StackLayout>
+						
+							<StackLayout
+			Orientation="Horizontal"
+			Spacing="10">
+
+						<Label 
+					Text="15SR"
+					FontSize="13"
+					x:Name="lblAmount"
+					TextColor="#91CA46"
+					FontAttributes="Bold"			
+					HorizontalOptions="StartAndExpand"/>
+						<StackLayout
+			HorizontalOptions="EndAndExpand"
+			VerticalOptions="End"
+			Orientation="Horizontal"
+			Spacing="10"
+			>
+						<Label 
+					Text="Delete"
+					FontSize="11"
+					TextColor="Gray"
+					VerticalTextAlignment="Center"/>
+						<Label 
+					Text="|"
+					FontSize="11"
+					TextColor="Gray"
+					VerticalTextAlignment="Center"/>
+						<Label 
+					Text="Save for later"
+					FontSize="11"
+					TextColor="Gray"
+					VerticalTextAlignment="Center"/>
+					</StackLayout>
+						</StackLayout>
+					</StackLayout>
+			</StackLayout>
+			</StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+		</StackLayout>
+</ContentPage>

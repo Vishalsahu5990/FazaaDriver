@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+		x:Class="Fazaa.HomePage"
+		Title="Store"
+		Padding="0"
+		Icon="menu"
+		>
+	<StackLayout
+			Orientation="Vertical"
+			Spacing="0" 
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="FillAndExpand"
+			Margin="0"
+			Padding="0"
+			>
+		<StackLayout x:Name="_slTitleBar"
+            Padding="0" Orientation="Horizontal" 
+            HeightRequest="65" BackgroundColor="#58B353"> 
+            <StackLayout.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double"
+                iOS="65"
+                Android="60"/>
+            </StackLayout.HeightRequest> 
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Image 
+                    x:Name="imgMenu" 
+                Source="menu" 
+                VerticalOptions="CenterAndExpand"
+                Margin="15,30,30,30" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="menu_Tapped" /> 
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <Image Source="fazya_white"
+             Margin="0,15,0,0"
+              HorizontalOptions="CenterAndExpand" 
+            VerticalOptions="CenterAndExpand"/>
+            
+            
+            <StackLayout VerticalOptions="FillAndExpand"  
+                WidthRequest="80">
+            <RelativeLayout 
+                    >
+            <Image Source="right_logo" 
+                    Aspect="AspectFill"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0.4}"
+                IsVisible="false">
+               
+            </Image>
+            </RelativeLayout>
+            </StackLayout>
+                
+            
+        </StackLayout>
+		 <StackLayout
+			Orientation="Horizontal"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Center"
+			    HeightRequest="50"
+				Padding="15"
+				BackgroundColor="#9BCB8F">
+			<Image 
+				Source="blankprofile"
+				Aspect="AspectFit"
+				    HeightRequest="60"
+				    WidthRequest="60"
+				x:Name="imgProfile"/>
+		<StackLayout
+			    Orientation="Vertical"
+				HorizontalOptions="Start"
+				VerticalOptions="Center"
+				Spacing="5"
+					>
+			<Label 
+					Text="Driver Name"
+					VerticalTextAlignment="Start"
+						x:Name="lblDriverName"
+					/>
+		    <Label 
+					Text="DriverName@live.com"
+					FontSize="12"
+					VerticalTextAlignment="Center"
+					TextColor="#728E6A"
+						x:Name="lblEmail"
+					/>
+	</StackLayout>
+	</StackLayout>
+		<StackLayout
+			Orientation="Vertical"
+			Spacing="0" 
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="FillAndExpand"
+			Margin="0"
+			Padding="0"
+			BackgroundColor="Gray"
+			x:Name="stlMap">
+			</StackLayout> 
+		</StackLayout> 
+</ContentPage>

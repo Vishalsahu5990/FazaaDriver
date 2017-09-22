@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{A80CFE65-418C-48F4-81B1-C3A54C5F05F6}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Fazaa.iOS</RootNamespace>
+    <AssemblyName>Fazaa.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: Faza Shar (7SFSKWT9LU)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>devFazaaDriver</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>false</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchSdkVersion>9.2</MtouchSdkVersion>
+    <CodesignProvision>devFazaaDriver</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.8.0.5\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.iOS">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.8.0.5\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\packages\WebP.Touch.1.0.2\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.6\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.6\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.6\lib\Xamarin.iOS10\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms.Touch">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.6\lib\Xamarin.iOS10\FFImageLoading.Forms.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.IOS">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.IOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.Platform">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="RoundedBoxView.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Forms.RoundedBoxView.1.0.0.7\lib\Xamarin.iOS10\RoundedBoxView.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="RoundedBoxView.Forms.Plugin.iOSUnified">
+      <HintPath>..\packages\Xam.Plugins.Forms.RoundedBoxView.1.0.0.7\lib\Xamarin.iOS10\RoundedBoxView.Forms.Plugin.iOSUnified.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Toasts.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\Toasts.Forms.Plugin.3.1.2\lib\Xamarin.iOS10\Toasts.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Toasts.Forms.Plugin.iOS">
+      <HintPath>..\packages\Toasts.Forms.Plugin.3.1.2\lib\Xamarin.iOS10\Toasts.Forms.Plugin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.20\lib\ios-unified\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetualEngine.SimpleStorage.iOS-Unified">
+      <HintPath>..\packages\SimpleStorage.1.4.1\lib\Xamarin.iOS10\PerpetualEngine.SimpleStorage.iOS-Unified.dll</HintPath>
+    </Reference>
+    <Reference Include="XFShapeView.iOS">
+      <HintPath>..\packages\VG.XFShapeView.1.0.4\lib\Xamarin.iOS10\XFShapeView.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="PushNotification.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.PushNotification.1.2.4\lib\Xamarin.iOS10\PushNotification.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PushNotification.Plugin">
+      <HintPath>..\packages\Xam.Plugin.PushNotification.1.2.4\lib\Xamarin.iOS10\PushNotification.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.XamForms.SignaturePad">
+      <HintPath>..\packages\SignaturePad.Xamarin.Forms.PCL.1.0.0.1\lib\Xamarin.iOS10\Acr.XamForms.SignaturePad.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.XamForms.SignaturePad.iOS">
+      <HintPath>..\packages\SignaturePad.Xamarin.Forms.PCL.1.0.0.1\lib\Xamarin.iOS10\Acr.XamForms.SignaturePad.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SignaturePad.iOS">
+      <HintPath>..\packages\SignaturePad.Xamarin.Forms.PCL.1.0.0.1\lib\Xamarin.iOS10\SignaturePad.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="DLToolkit.Forms.Controls.FlowListView">
+      <HintPath>..\packages\DLToolkit.Forms.Controls.FlowListView.2.0.4\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\DLToolkit.Forms.Controls.FlowListView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps">
+      <HintPath>..\packages\Xamarin.Forms.Maps.2.3.4.247\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps.iOS">
+      <HintPath>..\packages\Xamarin.Forms.Maps.2.3.4.247\lib\Xamarin.iOS10\Xamarin.Forms.Maps.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions.Abstractions">
+      <HintPath>..\packages\Plugin.Permissions.2.0.1\lib\Xamarin.iOS10\Plugin.Permissions.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\packages\Plugin.Permissions.2.0.1\lib\Xamarin.iOS10\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.4.0.1\lib\Xamarin.iOS10\Plugin.Geolocator.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.4.0.1\lib\Xamarin.iOS10\Plugin.Geolocator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fazaa\Fazaa.csproj">
+      <Project>{A84E1EB6-236C-4EB0-8C25-454DF4E620BE}</Project>
+      <Name>Fazaa</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="CustomRenderers\" />
+    <Folder Include="DependencyService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <None Include="PushNotificationApplicationDelegate.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="CustomRenderers\MyEntryRenderer.cs" />
+    <Compile Include="CustomRenderers\CustomMapRenderer.cs" />
+    <Compile Include="CustomRenderers\CustomMKPinAnnotationView.cs" />
+    <Compile Include="CustomRenderers\MyMapDelegate.cs" />
+    <Compile Include="DependencyService\iOSMethods.cs" />
+    <Compile Include="Bootstrap\SignaturePadBootstrap.cs" />
+    <Compile Include="CustomRenderers\CustomFramRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fb.png" />
+    <BundleResource Include="Resources\login_bg.png" />
+    <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\password.png" />
+    <BundleResource Include="Resources\twitter.png" />
+    <BundleResource Include="Resources\user_name.png" />
+    <BundleResource Include="Resources\fb%402x.png" />
+    <BundleResource Include="Resources\login_bg%402x.png" />
+    <BundleResource Include="Resources\logo%402x.png" />
+    <BundleResource Include="Resources\password%402x.png" />
+    <BundleResource Include="Resources\twitter%402x.png" />
+    <BundleResource Include="Resources\user_name%402x.png" />
+    <BundleResource Include="Resources\fb~ipad.png" />
+    <BundleResource Include="Resources\login_bg~ipad.png" />
+    <BundleResource Include="Resources\logo~ipad.png" />
+    <BundleResource Include="Resources\password~ipad.png" />
+    <BundleResource Include="Resources\twitter~ipad.png" />
+    <BundleResource Include="Resources\user_name~ipad.png" />
+    <BundleResource Include="Resources\fb%403x.png" />
+    <BundleResource Include="Resources\login_bg%403x.png" />
+    <BundleResource Include="Resources\logo%403x.png" />
+    <BundleResource Include="Resources\password%403x.png" />
+    <BundleResource Include="Resources\twitter%403x.png" />
+    <BundleResource Include="Resources\user_name%403x.png" />
+    <BundleResource Include="Resources\about.png" />
+    <BundleResource Include="Resources\add_wishlist.png" />
+    <BundleResource Include="Resources\ae.png" />
+    <BundleResource Include="Resources\arrow.png" />
+    <BundleResource Include="Resources\category.png" />
+    <BundleResource Include="Resources\check.png" />
+    <BundleResource Include="Resources\coffee.png" />
+    <BundleResource Include="Resources\credit_card.png" />
+    <BundleResource Include="Resources\deliver.png" />
+    <BundleResource Include="Resources\dollar.png" />
+    <BundleResource Include="Resources\f_name.png" />
+    <BundleResource Include="Resources\favourite.png" />
+    <BundleResource Include="Resources\fazza_name.png" />
+    <BundleResource Include="Resources\filter.png" />
+    <BundleResource Include="Resources\groceries.png" />
+    <BundleResource Include="Resources\heart_btn.png" />
+    <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\icon.png" />
+    <BundleResource Include="Resources\logo_nav.png" />
+    <BundleResource Include="Resources\logout.png" />
+    <BundleResource Include="Resources\marker.png" />
+    <BundleResource Include="Resources\my_account.png" />
+    <BundleResource Include="Resources\navigation.png" />
+    <BundleResource Include="Resources\pharmacy.png" />
+    <BundleResource Include="Resources\plus.png" />
+    <BundleResource Include="Resources\remove.png" />
+    <BundleResource Include="Resources\restaurants.png" />
+    <BundleResource Include="Resources\right_logo.png" />
+    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\setting.png" />
+    <BundleResource Include="Resources\sort_by.png" />
+    <BundleResource Include="Resources\thankyou_logo.png" />
+    <BundleResource Include="Resources\top_cart%27.png" />
+    <BundleResource Include="Resources\top_search.png" />
+    <BundleResource Include="Resources\top_wishlist.png" />
+    <BundleResource Include="Resources\uncheck.png" />
+    <BundleResource Include="Resources\wishlist.png" />
+    <BundleResource Include="Resources\about%402x.png" />
+    <BundleResource Include="Resources\add_wishlist%402x.png" />
+    <BundleResource Include="Resources\ae%402x.png" />
+    <BundleResource Include="Resources\arrow%402x.png" />
+    <BundleResource Include="Resources\category%402x.png" />
+    <BundleResource Include="Resources\check%402x.png" />
+    <BundleResource Include="Resources\coffee%402x.png" />
+    <BundleResource Include="Resources\credit_card%402x.png" />
+    <BundleResource Include="Resources\deliver%402x.png" />
+    <BundleResource Include="Resources\dollar%402x.png" />
+    <BundleResource Include="Resources\f_name%402x.png" />
+    <BundleResource Include="Resources\favourite%402x.png" />
+    <BundleResource Include="Resources\fazza_name%402x.png" />
+    <BundleResource Include="Resources\filter%402x.png" />
+    <BundleResource Include="Resources\groceries%402x.png" />
+    <BundleResource Include="Resources\heart_btn%402x.png" />
+    <BundleResource Include="Resources\home%402x.png" />
+    <BundleResource Include="Resources\icon%402x.png" />
+    <BundleResource Include="Resources\logo_nav%402x.png" />
+    <BundleResource Include="Resources\logout%402x.png" />
+    <BundleResource Include="Resources\marker%402x.png" />
+    <BundleResource Include="Resources\my_account%402x.png" />
+    <BundleResource Include="Resources\navigation%402x.png" />
+    <BundleResource Include="Resources\pharmacy%402x.png" />
+    <BundleResource Include="Resources\plus%402x.png" />
+    <BundleResource Include="Resources\remove%402x.png" />
+    <BundleResource Include="Resources\restaurants%402x.png" />
+    <BundleResource Include="Resources\right_logo%402x.png" />
+    <BundleResource Include="Resources\search%402x.png" />
+    <BundleResource Include="Resources\setting%402x.png" />
+    <BundleResource Include="Resources\sort_by%402x.png" />
+    <BundleResource Include="Resources\thankyou_logo%402x.png" />
+    <BundleResource Include="Resources\top_cart%27%402x.png" />
+    <BundleResource Include="Resources\top_search%402x.png" />
+    <BundleResource Include="Resources\top_wishlist%402x.png" />
+    <BundleResource Include="Resources\uncheck%402x.png" />
+    <BundleResource Include="Resources\wishlist%402x.png" />
+    <BundleResource Include="Resources\about%403x.png" />
+    <BundleResource Include="Resources\add_wishlist%403x.png" />
+    <BundleResource Include="Resources\ae%403x.png" />
+    <BundleResource Include="Resources\arrow%403x.png" />
+    <BundleResource Include="Resources\category%403x.png" />
+    <BundleResource Include="Resources\check%403x.png" />
+    <BundleResource Include="Resources\coffee%403x.png" />
+    <BundleResource Include="Resources\credit_card%403x.png" />
+    <BundleResource Include="Resources\deliver%403x.png" />
+    <BundleResource Include="Resources\dollar%403x.png" />
+    <BundleResource Include="Resources\f_name%403x.png" />
+    <BundleResource Include="Resources\favourite%403x.png" />
+    <BundleResource Include="Resources\fazza_name%403x.png" />
+    <BundleResource Include="Resources\filter%403x.png" />
+    <BundleResource Include="Resources\groceries%403x.png" />
+    <BundleResource Include="Resources\heart_btn%403x.png" />
+    <BundleResource Include="Resources\home%403x.png" />
+    <BundleResource Include="Resources\icon%403x.png" />
+    <BundleResource Include="Resources\logo_nav%403x.png" />
+    <BundleResource Include="Resources\logout%403x.png" />
+    <BundleResource Include="Resources\marker%403x.png" />
+    <BundleResource Include="Resources\my_account%403x.png" />
+    <BundleResource Include="Resources\navigation%403x.png" />
+    <BundleResource Include="Resources\pharmacy%403x.png" />
+    <BundleResource Include="Resources\plus%403x.png" />
+    <BundleResource Include="Resources\remove%403x.png" />
+    <BundleResource Include="Resources\restaurants%403x.png" />
+    <BundleResource Include="Resources\right_logo%403x.png" />
+    <BundleResource Include="Resources\search%403x.png" />
+    <BundleResource Include="Resources\setting%403x.png" />
+    <BundleResource Include="Resources\sort_by%403x.png" />
+    <BundleResource Include="Resources\thankyou_logo%403x.png" />
+    <BundleResource Include="Resources\top_cart%27%403x.png" />
+    <BundleResource Include="Resources\top_search%403x.png" />
+    <BundleResource Include="Resources\top_wishlist%403x.png" />
+    <BundleResource Include="Resources\uncheck%403x.png" />
+    <BundleResource Include="Resources\wishlist%403x.png" />
+    <BundleResource Include="Resources\about~ipad.png" />
+    <BundleResource Include="Resources\add_wishlist~ipad.png" />
+    <BundleResource Include="Resources\ae~ipad.png" />
+    <BundleResource Include="Resources\arrow~ipad.png" />
+    <BundleResource Include="Resources\category~ipad.png" />
+    <BundleResource Include="Resources\check~ipad.png" />
+    <BundleResource Include="Resources\coffee~ipad.png" />
+    <BundleResource Include="Resources\credit_card~ipad.png" />
+    <BundleResource Include="Resources\deliver~ipad.png" />
+    <BundleResource Include="Resources\dollar~ipad.png" />
+    <BundleResource Include="Resources\f_name~ipad.png" />
+    <BundleResource Include="Resources\favourite~ipad.png" />
+    <BundleResource Include="Resources\fazza_name~ipad.png" />
+    <BundleResource Include="Resources\filter~ipad.png" />
+    <BundleResource Include="Resources\groceries~ipad.png" />
+    <BundleResource Include="Resources\heart_btn~ipad.png" />
+    <BundleResource Include="Resources\home~ipad.png" />
+    <BundleResource Include="Resources\icon~ipad.png" />
+    <BundleResource Include="Resources\logo_nav~ipad.png" />
+    <BundleResource Include="Resources\logout~ipad.png" />
+    <BundleResource Include="Resources\marker~ipad.png" />
+    <BundleResource Include="Resources\my_account~ipad.png" />
+    <BundleResource Include="Resources\navigation~ipad.png" />
+    <BundleResource Include="Resources\pharmacy~ipad.png" />
+    <BundleResource Include="Resources\plus~ipad.png" />
+    <BundleResource Include="Resources\remove~ipad.png" />
+    <BundleResource Include="Resources\restaurants~ipad.png" />
+    <BundleResource Include="Resources\right_logo~ipad.png" />
+    <BundleResource Include="Resources\search~ipad.png" />
+    <BundleResource Include="Resources\setting~ipad.png" />
+    <BundleResource Include="Resources\sort_by~ipad.png" />
+    <BundleResource Include="Resources\thankyou_logo~ipad.png" />
+    <BundleResource Include="Resources\top_cart%27~ipad.png" />
+    <BundleResource Include="Resources\top_search~ipad.png" />
+    <BundleResource Include="Resources\top_wishlist~ipad.png" />
+    <BundleResource Include="Resources\uncheck~ipad.png" />
+    <BundleResource Include="Resources\wishlist~ipad.png" />
+    <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\bg.png" />
+    <BundleResource Include="Resources\bg%402x.png" />
+    <BundleResource Include="Resources\menu.png" />
+    <BundleResource Include="Resources\menu%402x.png" />
+    <BundleResource Include="Resources\blankprofile.png" />
+    <BundleResource Include="Resources\splash.png" />
+    <BundleResource Include="Resources\splash%402x.png" />
+    <BundleResource Include="Resources\history_rides.png" />
+    <BundleResource Include="Resources\history_rides%402x.png" />
+    <BundleResource Include="Resources\new_order.png" />
+    <BundleResource Include="Resources\new_order%402x.png" />
+    <BundleResource Include="Resources\profile.png" />
+    <BundleResource Include="Resources\profile%402x.png" />
+    <BundleResource Include="Resources\bg%403x.png" />
+    <BundleResource Include="Resources\history_rides%403x.png" />
+    <BundleResource Include="Resources\logo_heading%403x.png" />
+    <BundleResource Include="Resources\menu%403x.png" />
+    <BundleResource Include="Resources\new_order%403x.png" />
+    <BundleResource Include="Resources\popup_location%403x.png" />
+    <BundleResource Include="Resources\profile%403x.png" />
+    <BundleResource Include="Resources\splash%403x.png" />
+    <BundleResource Include="Resources\fazya_white.png" />
+    <BundleResource Include="Resources\fazya_white%402x.png" />
+    <BundleResource Include="Resources\marker1.png" />
+    <BundleResource Include="Resources\marker1%402x.png" />
+    <BundleResource Include="Resources\nav_direction.png" />
+    <BundleResource Include="Resources\nav_direction%402x.png" />
+    <BundleResource Include="Resources\black.png" />
+    <BundleResource Include="Resources\black%402x.png" />
+    <BundleResource Include="Resources\green.png" />
+    <BundleResource Include="Resources\green%402x.png" />
+    <BundleResource Include="Resources\location.png" />
+    <BundleResource Include="Resources\nav_direction%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\profilepic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.20</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="GeolocatorPlugin">
+      <Version>1.0.3</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

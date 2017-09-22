@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="Fazaa.MyOrderPage"
+		Title="My order"
+		BackgroundColor="White"
+		Padding="10">
+
+	<StackLayout
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="FillAndExpand"
+			Orientation="Vertical">
+	
+	<ListView   
+				x:Name="listView"
+				SeparatorColor="Transparent"
+				VerticalOptions="FillAndExpand"
+				RowHeight="150"
+				>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+   <Frame
+				BackgroundColor="Transparent"
+				Padding="5"
+				Margin="0,5,0,5"
+				>
+			<StackLayout
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			Orientation="Vertical"
+			BackgroundColor="White"
+				Padding="3"	
+				Spacing="0">
+				<StackLayout
+			HorizontalOptions="End"
+			VerticalOptions="Center"
+			Orientation="Horizontal"
+			>
+					<Label 
+					Text="25 APR 2014"
+					FontSize="8"
+					x:Name="lblDate"
+					TextColor="Gray"
+					/>
+				</StackLayout>
+				<StackLayout
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			Orientation="Horizontal"
+
+					>
+					<Image 
+					Source="fruits"
+					HeightRequest="100"
+					WidthRequest="90"
+					Aspect="AspectFill"
+					Margin="5"/>
+					<StackLayout
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Start"
+			Orientation="Vertical"
+
+					>
+					<Label 
+					Text="Lorem Ipsum is simply dummy"
+					FontSize="12"
+					x:Name="lblTitle"
+					TextColor="#336FB7"
+					/>
+						<Label 
+					Text="It is a long elastic fact that a user destracted by a readabale content of a page when looking at its layout. The point of using lorem ipsum is that it has a more or less normal distribution of letters as opposed to using content here making it look like redable English. "
+					FontSize="9"
+					x:Name="lblDescription"
+					TextColor="Gray"
+					/>
+						<BoxView
+							HeightRequest="0.5"
+							BackgroundColor="Gray"
+							HorizontalOptions="FillAndExpand"
+							Margin="0,3,5,3"
+							/>
+							<StackLayout
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="End"
+			Orientation="Horizontal"
+			Spacing="25"
+					>
+							
+						<Label 
+					Text="Qty: 10"
+					FontSize="11"
+					x:Name="lblQuantity"
+					TextColor="#336FB7"
+									
+					/>
+						<Label 
+					Text="Amount: $100"
+					FontSize="11"
+					x:Name="lblAmount"
+					TextColor="#336FB7"
+								
+					/>
+					</StackLayout>
+						</StackLayout>
+			
+				</StackLayout>
+			
+				
+			</StackLayout>
+		</Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+		</StackLayout>
+</ContentPage>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+		x:Class="Fazaa.MyAccountPage"
+		BackgroundColor="Black"
+		>
+	
+	<StackLayout
+				Orientation="Vertical"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				HeightRequest="50"
+			    Padding="0"
+			    Margin="0"
+			    BackgroundColor="Red">
+		<StackLayout
+				HorizontalOptions="FillAndExpand"
+				BackgroundColor="Green"
+			    HeightRequest="50"
+				Orientation="Horizontal">
+			    <Label Text="Order Summary"
+			    TextColor="White"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+				Margin="10,0,0,0"/>
+	</StackLayout>
+		<StackLayout
+				HorizontalOptions="FillAndExpand"
+				BackgroundColor="White"
+			    HeightRequest="30"
+				Orientation="Horizontal"
+				Spacing="10">
+			<Image Source="icon"
+				Margin="15,0,0,0"/>
+			    <Label Text="Order Summary :"
+			    TextColor="Black"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+				FontSize="13"/>
+			 <Label Text="Order Summary"
+			    TextColor="Gray"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+				FontSize="13"/>
+			</StackLayout>
+		<BoxView BackgroundColor="Gray"
+				HeightRequest="0.3"/>
+		<StackLayout
+				HorizontalOptions="FillAndExpand"
+				BackgroundColor="White"
+			    HeightRequest="30"
+				Orientation="Horizontal"
+				Spacing="10">
+			<Image Source="icon"
+				Margin="15,0,0,0"/>
+			    <Label Text="Order Summary :"
+			    TextColor="Black"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+				FontSize="13"/>
+			 <Label Text="Order Summary"
+			    TextColor="Gray"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+				FontSize="13"/>
+			</StackLayout>
+		<StackLayout
+				HorizontalOptions="FillAndExpand"
+				BackgroundColor="Gray"
+			    HeightRequest="50"
+				Orientation="Horizontal">
+			 <Label Text="ITEM"
+			    TextColor="White"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+					HorizontalOptions="Start"
+				Margin="20,0,0,0"/>
+			<Label Text="ITEM"
+			    TextColor="White"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+					HorizontalOptions="EndAndExpand"
+				Margin="0,0,20,0"/>
+				</StackLayout>
+		<StackLayout
+				Orientation="Vertical"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand">
+				 <ListView x:Name="listView">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <TextCell TextColor="Black" Text="{Binding .}"></TextCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+		</StackLayout>
+		</StackLayout>	
+	
+</ContentPage>

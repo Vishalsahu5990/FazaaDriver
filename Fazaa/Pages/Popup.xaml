@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+        x:Class="Fazaa.Popup"
+		>
+
+	<StackLayout
+			Orientation="Vertical" 
+			VerticalOptions="CenterAndExpand"
+		HorizontalOptions="FillAndExpand"
+			HeightRequest="350"
+			BackgroundColor="White"
+			Margin="10">
+		<StackLayout
+				HorizontalOptions="FillAndExpand"
+				BackgroundColor="#56B352"
+			   
+				Orientation="Horizontal">
+			    <Label Text="Order Summary"
+			    TextColor="White"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+				Margin="10"
+            FontSize="Small"/>
+	</StackLayout>
+			<StackLayout 
+				Orientation="Vertical"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				HeightRequest="50"
+			    Padding="0,0,0,20"
+			    BackgroundColor="White">
+
+            <Grid HorizontalOptions="FillAndExpand" ColumnSpacing="1">
+              <StackLayout
+                    Grid.Row="0"
+                    Grid.Column="0"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="White"
+                HeightRequest="30"
+                Orientation="Horizontal"
+                Spacing="10">
+            <Image Source="location"
+                Margin="15,0,0,0"/>
+                <Label Text="Source location:"
+                TextColor="Black"
+                VerticalOptions="Center"
+               VerticalTextAlignment="Center"
+                FontSize="10"/>
+            
+            </StackLayout> 
+                 <Label
+                     Grid.Row="0"
+                    Grid.Column="1"
+             x:Name="lblsource"
+                    Text="N/A"
+                TextColor="Gray"
+                VerticalOptions="Center"
+               VerticalTextAlignment="Center"
+                FontSize="10"
+                LineBreakMode="TailTruncation"/>
+
+
+            </Grid>
+
+
+        
+        <BoxView BackgroundColor="Gray"
+                HeightRequest="1"/>
+         <Grid HorizontalOptions="FillAndExpand" ColumnSpacing="1">
+             
+
+
+            <StackLayout
+                  Grid.Row="0"
+                    Grid.Column="0"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="White"
+                HeightRequest="30"
+                Orientation="Horizontal"
+                Spacing="10">
+            <Image Source="location"
+                Margin="15,0,0,0"/>
+                <Label Text="Destination location :"
+                TextColor="Black"
+                VerticalOptions="Center"
+               VerticalTextAlignment="Center"
+                FontSize="10"/>
+             
+            </StackLayout>
+            <Label
+                 Grid.Row="0"
+                    Grid.Column="1"
+              x:Name="lblDestination"
+                    Text="N/A"
+                TextColor="Gray"
+                VerticalOptions="Center"
+               VerticalTextAlignment="Center"
+                FontSize="10"
+                LineBreakMode="TailTruncation"/>
+            </Grid>
+		<StackLayout
+				HorizontalOptions="FillAndExpand"
+				BackgroundColor="#DEDCDC"
+			    HeightRequest="60"
+				Orientation="Horizontal">
+			 <Label Text="ITEM"
+			    TextColor="Black"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+			   HorizontalOptions="Start"
+				Margin="20,0,0,0"/>
+			<Label Text="PRICE"
+			    TextColor="Black"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+					HorizontalOptions="EndAndExpand"
+				Margin="0,0,20,0"/>
+				</StackLayout>
+		<StackLayout
+				Orientation="Vertical"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand">
+				 <ListView x:Name="listView" RowHeight="60">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+				<ViewCell >
+                <StackLayout 
+            VerticalOptions="Start" 
+            Spacing="10" 
+            Orientation="Horizontal" 
+            Padding="10">
+               <ffimageloading:CachedImage 
+                            HeightRequest="50" 
+                            WidthRequest="50"
+                            Aspect="AspectFill"
+                            DownsampleHeight="70"
+                            DownsampleWidth="70"
+                            DownsampleUseDipUnits="false" 
+                            LoadingPlaceholder="image_loading.png"
+                            ErrorPlaceholder="image_error.png"
+                            Source="{Binding Product_Image}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Start"
+                            DownsampleToViewSize="false"
+                                    />
+                                    <StackLayout HorizontalOptions="FillAndExpand">
+                                    <Label
+                                        Text="{Binding Product_Name}"
+                                        FontAttributes="Bold"
+                                        FontSize="Micro"/>
+                 <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                        <Label 
+                                        Text="{Binding quantity}"
+                                        FontSize="10"
+                                        TextColor="Gray"/>
+                      <Label 
+                                        Text="{Binding Category_Name}"
+                                        FontSize="10"
+                                        TextColor="Gray"
+                                        />
+                      </StackLayout>
+                                    </StackLayout>
+
+                                    <StackLayout>
+                                    <Label
+                                            IsVisible="false"
+                                        Text="Mix fruits"
+                                        FontAttributes="Bold"/>
+               
+                
+                     <Label
+                                        HorizontalOptions="EndAndExpand"
+                                        TextColor="#8DC57D"
+                                        Text="{Binding Product_Price}"
+                                        FontAttributes="Bold"
+                                    VerticalOptions="CenterAndExpand"
+                                    Margin="0,0,10,0"
+                                        FontSize="10"/>
+              
+                                      
+                                    </StackLayout>
+                                   
+                                    
+                                </StackLayout>
+							</ViewCell>			
+             </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+		</StackLayout>
+		</StackLayout>
+		</StackLayout>
+	
+</pages:PopupPage>

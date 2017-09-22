@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Fazaa.HistoryofRidesPage"
+		xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+		BackgroundColor="#9BCB8F">
+	<StackLayout
+			Orientation="Vertical"
+			Spacing="0" 
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="FillAndExpand"
+			Margin="0"
+			Padding="0"
+			>
+		 <StackLayout x:Name="_slTitleBar"
+            Padding="0" Orientation="Horizontal" 
+            HeightRequest="65" BackgroundColor="#58B353"> 
+            <StackLayout.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double"
+                iOS="65"
+                Android="60"/>
+            </StackLayout.HeightRequest> 
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Image 
+                    x:Name="imgMenu" 
+                Source="menu" 
+                VerticalOptions="CenterAndExpand"
+                Margin="15,30,30,30" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="menu_Tapped" /> 
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <Image Source="fazya_white"
+             Margin="0,15,0,0"
+              HorizontalOptions="CenterAndExpand" 
+            VerticalOptions="CenterAndExpand"/>
+            
+            
+            <StackLayout VerticalOptions="FillAndExpand"  
+                WidthRequest="80">
+            <RelativeLayout 
+                    >
+            <Image Source="right_logo" 
+                    Aspect="AspectFill"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0.4}"
+                IsVisible="false">
+               
+            </Image>
+            </RelativeLayout>
+            </StackLayout>
+                
+            
+        </StackLayout>
+		 <StackLayout
+			Orientation="Horizontal"
+				HorizontalOptions="Center"
+				VerticalOptions="Center"
+				HeightRequest="20"
+				Padding="10"
+				BackgroundColor="#9BCB8F">
+
+		 <StackLayout
+			    Orientation="Vertical"
+				HorizontalOptions="Center"
+				VerticalOptions="Center"
+			    >
+			<Label 
+					Text="History of rides"
+					VerticalTextAlignment="Center"
+					HorizontalOptions="FillAndExpand"
+					VerticalOptions="Center"
+					FontSize="Small"
+					TextColor="White"/>
+		 </StackLayout>
+</StackLayout>
+		<StackLayout
+			Orientation="Vertical"
+			Spacing="0" 
+			HorizontalOptions="Center"
+			BackgroundColor="White"
+			x:Name="stlMap"
+			Padding="0"
+            VerticalOptions="FillAndExpand"
+			>
+			<StackLayout Spacing="0">
+
+    <Grid 
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White"
+                    VerticalOptions="Start"
+                    HeightRequest="40"
+                    Margin="10">
+ 
+    <StackLayout
+                    Grid.Row="0"
+                    Grid.Column="0" 
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand"
+                >
+     <Label 
+                    Text="Order no." 
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="Black" 
+                    VerticalOptions="CenterAndExpand"
+                    FontAttributes="Bold"
+                               FontSize="10"
+               />
+                </StackLayout>
+                
+                <StackLayout
+                    Grid.Row="0"
+                    Grid.Column="1"  
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="Center">
+                 <Label 
+                    Text="Date"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="Black"
+                      FontSize="10"
+                FontAttributes="Bold"/>
+                </StackLayout>
+                
+                <StackLayout 
+                     Grid.Row="0"
+                    Grid.Column="2" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+                 <Label 
+                    Text="Fare"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="Black"
+                      FontSize="10"
+                FontAttributes="Bold"/>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="0"
+                    Grid.Column="3"  VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+                 <Label 
+                    Text="Status"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="Black"
+                    FontSize="10"
+                FontAttributes="Bold"/>
+                </StackLayout>
+ 
+
+
+
+
+
+</Grid>
+ <BoxView BackgroundColor="Gray"
+                HeightRequest="0.5"
+                    
+                />       
+        </StackLayout>
+
+            <flv:FlowListView 
+            SeparatorVisibility="None"
+            HasUnevenRows="true"
+            FlowItemTappedCommand="{Binding ItemTappedCommand}" 
+            FlowLastTappedItem="{Binding LastTappedItem}"
+            FlowColumnMinWidth="320" 
+            x:Name="flowlistview"
+                Margin="10"
+                >
+
+            <flv:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+                    <Grid >
+                        
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                       <StackLayout
+            Orientation="Vertical"
+            Spacing="0" 
+            HorizontalOptions="Center"
+            BackgroundColor="{Binding Cell_Color}"
+            x:Name="stlMap"
+           VerticalOptions="FillAndExpand"
+             Padding="0,10,0,10"   >
+                      <Grid 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    >
+ 
+  <Label 
+                    Text="{Binding Order_Id}" 
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="#58B353" 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="10"
+                    LineBreakMode="TailTruncation"/>
+  <Label 
+                    Text="{Binding Order_DateTime}"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="Black"
+                    Grid.Row="0"
+                    Grid.Column="1" 
+                    FontSize="10"
+                    LineBreakMode="TailTruncation"/>
+  <Label 
+                    Text="{Binding Total_Price}"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="Black"
+                    Grid.Row="0"
+                    Grid.Column="2" 
+                    FontSize="10"
+                    LineBreakMode="TailTruncation"/>
+  <Label 
+                    Text="{Binding Order_Status}"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="Black"
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    FontSize="10"
+                    LineBreakMode="TailTruncation"/>
+</Grid>
+                               
+                                </StackLayout> 
+                             <BoxView BackgroundColor="Gray"
+                HeightRequest="0.5"
+                VerticalOptions="EndAndExpand"    
+                /> 
+                    </Grid>
+                </DataTemplate>
+            </flv:FlowListView.FlowColumnTemplate>
+        
+        </flv:FlowListView>
+					</StackLayout>  
+		</StackLayout> 
+        
+</ContentPage>

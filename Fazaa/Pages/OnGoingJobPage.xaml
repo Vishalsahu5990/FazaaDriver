@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:XFShapeView="clr-namespace:XFShapeView;assembly=XFShapeView"
+		xmlns:ShapeView="clr-namespace:ShapeView;assembly=ShapeView"
+     
+		x:Class="Fazaa.OnGoingJobPage"
+		Icon="logo"
+		Title="Driver">
+	<ScrollView 
+			IsClippedToBounds="true"
+			> 
+		<StackLayout Spacing="0">
+		 <StackLayout
+            Orientation="Horizontal"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="60"
+                BackgroundColor="#57B352"
+
+                Padding="0">
+
+        <StackLayout Orientation="Horizontal" 
+                    HorizontalOptions="CenterAndExpand">
+        <Image 
+            Aspect="AspectFit"
+                    Source="logo"
+                Margin="10,10,5,10"/> 
+                <Label Text="Driver" 
+                FontAttributes="Bold"
+                TextColor="White"
+                    VerticalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center"/>
+                </StackLayout>
+            
+         </StackLayout>
+
+
+			 <StackLayout
+            Orientation="Horizontal"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="60"
+                BackgroundColor="#9BCB8F"
+                Margin="0"
+                Padding="0">
+
+        <StackLayout Orientation="Horizontal" 
+                    HorizontalOptions="CenterAndExpand">
+        <Label Text="Ongoing Job"
+					HorizontalOptions="CenterAndExpand"
+					VerticalOptions="Center"
+					TextColor="White"/>
+                </StackLayout>
+            
+         </StackLayout> 
+	<StackLayout 
+			Orientation="Vertical"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="StartAndExpand"
+			Spacing="5"
+			>
+
+			<!--<StackLayout 
+			Orientation="Horizontal"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Center"
+			BackgroundColor="#9BCB8F"
+			HeightRequest="50"
+			>
+				<StackLayout 
+			Orientation="Horizontal"
+			HorizontalOptions="Center"
+			VerticalOptions="Center"
+			BackgroundColor="Red"
+			HeightRequest="50"
+			>
+				<Label Text="Ongoing Job"
+					HorizontalOptions="Center"
+					VerticalOptions="Center"
+					TextColor="White"/>
+			</StackLayout>
+			</StackLayout>-->
+			<!--start info-->
+			<StackLayout
+				HorizontalOptions="FillAndExpand"
+				BackgroundColor="White"
+			    HeightRequest="30"
+				Orientation="Horizontal"
+				Spacing="10">
+			<Label 
+						Margin="15,0,0,0"
+						Text="Name :"
+			    TextColor="Black"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+				FontSize="13"/>
+			 <Label Text="Order Summary"
+			    TextColor="Gray"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+				FontSize="13"
+					x:Name="lblName"
+					Margin="15,0,0,0"/>
+			</StackLayout>
+		<BoxView BackgroundColor="Gray"
+				HeightRequest="0.3"/>
+			<StackLayout
+				HorizontalOptions="FillAndExpand"
+				BackgroundColor="White"
+			    HeightRequest="30"
+				Orientation="Horizontal"
+				Spacing="10"> 
+			<Label 
+						Margin="15,0,0,0"
+						Text="Destination Location :"
+			    TextColor="Black"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+				FontSize="13"/>
+			 <Label Text="Order Summary"
+			    TextColor="Gray"
+			    VerticalOptions="Center"
+			   VerticalTextAlignment="Center"
+				FontSize="13"
+					x:Name="lblDestinationLocation"/>
+			</StackLayout>
+		<BoxView BackgroundColor="Gray"
+				HeightRequest="1"/>
+			<!--End info-->
+			<StackLayout
+				HorizontalOptions="FillAndExpand"
+				Orientation="Horizontal"
+				VerticalOptions="FillAndExpand"
+				Spacing="10"
+				Padding="10"
+				>
+				<StackLayout
+
+				Orientation="Vertical"
+				Spacing="0"
+				VerticalOptions="FillAndExpand"
+						>
+					<XFShapeView:ShapeView
+					ShapeType="Circle"
+					Color="#56B352"
+					HeightRequest="100"
+					WidthRequest="100"
+					x:Name="ViewOnStore"		
+					>
+
+                <XFShapeView:ShapeView.Content>
+                <StackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Orientation="Vertical">
+                <Image Source="fazya_white"/>
+                <Label 
+                Text="on the store" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="12"
+                TextColor="White"/> 
+                </StackLayout>
+                    </XFShapeView:ShapeView.Content>
+                </XFShapeView:ShapeView>
+					<BoxView
+						BackgroundColor="Gray"
+						WidthRequest="10"
+						HeightRequest="60"
+						HorizontalOptions="Center"
+						x:Name="B1"/>
+					<XFShapeView:ShapeView
+					ShapeType="Circle"
+					Color="#808283"
+					HeightRequest="100"
+					WidthRequest="100"
+					x:Name="ViewInStore">
+
+                <XFShapeView:ShapeView.Content>
+                <StackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Orientation="Vertical">
+                <Image Source="fazya_white"/>
+                <Label 
+                Text="in the store" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="12"
+                TextColor="White"/>
+                </StackLayout>
+                    </XFShapeView:ShapeView.Content>
+                </XFShapeView:ShapeView>
+					<BoxView
+						BackgroundColor="Gray"
+						WidthRequest="10"
+						HeightRequest="60"
+						HorizontalOptions="Center"
+						x:Name="B2"/>
+					<XFShapeView:ShapeView
+					ShapeType="Circle"
+					Color="#808283"
+					HeightRequest="100"
+					WidthRequest="100"
+					x:Name="ViewOnWay"
+					>
+
+                <XFShapeView:ShapeView.Content>
+                <StackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Orientation="Vertical">
+               
+                <Label 
+                Text="Your order is" 
+                VerticalOptions="Center"
+                FontSize="12"
+                TextColor="White"
+				HorizontalOptions="Center"/>
+								 <Label 
+                Text=" on the way" 
+                VerticalOptions="Center"
+                FontSize="12"
+                TextColor="White"
+				HorizontalOptions="Center"/>
+								 <Label 
+                Text="to you" 
+                VerticalOptions="Center"
+                FontSize="12"
+                TextColor="White"
+				HorizontalOptions="Center"/>
+                </StackLayout>
+                    </XFShapeView:ShapeView.Content>
+                </XFShapeView:ShapeView>
+				</StackLayout>
+				<StackLayout
+				HorizontalOptions="FillAndExpand"
+				Orientation="Vertical"
+				Spacing="10"
+				VerticalOptions="FillAndExpand"> 
+					<StackLayout x:Name="stlMap"
+							VerticalOptions="FillAndExpand"
+							HorizontalOptions="FillAndExpand"
+
+							>
+
+					</StackLayout>
+					<Button
+				BackgroundColor="#56B353"
+				BorderRadius="0"
+				Text="Call User"
+				TextColor="White"
+				/>
+					<Button
+				BackgroundColor="#56B353"
+				BorderRadius="0"
+				Text="Message User"
+				TextColor="White"
+				/>
+					<Button
+							x:Name="btnViewOrderSummary"
+				BackgroundColor="#56B353"
+				BorderRadius="0"
+				Text="View Order Summary"
+				TextColor="White"
+				/>
+					<Button
+				BackgroundColor="#56B353"
+				BorderRadius="0"
+				Text="Cancel Order"
+				TextColor="White"
+				/>
+					<Button
+				BackgroundColor="#292828"
+				BorderRadius="0"
+				Text="Job Finish"
+				TextColor="White"
+			    x:Name="btnFinish"/>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+			</StackLayout>
+		</ScrollView>
+</ContentPage>
